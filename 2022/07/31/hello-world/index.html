@@ -6,15 +6,15 @@
   
   <title>Hello World | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
 <meta property="og:url" content="http://example.com/2022/07/31/hello-world/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-31T12:17:55.878Z">
-<meta property="article:modified_time" content="2022-07-31T12:17:55.878Z">
+<meta property="article:modified_time" content="2022-07-16T11:05:30.000Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -96,7 +96,9 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br><span class="line"><span class="built_in">echo</span> hello_shiw</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
@@ -107,12 +109,26 @@
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
+<p>如果你想另起一页，那么可以使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page board</span><br><span class="line">系统会自动给你在<span class="built_in">source</span>文件夹下创建一个board文件夹，以及board文件夹中的index.md，这样你访问的board对应的链接就是http://xxx.xxx/board</span><br></pre></td></tr></table></figure>
+
+<p>draft是草稿的意思，也就是你如果想写文章，又不希望被看到，那么可以</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new draft newpage</span><br></pre></td></tr></table></figure>
+
+<p>这样会在source&#x2F;_draft中新建一个newpage.md文件，如果你的草稿文件写的过程中，想要预览一下，那么可以使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo sever --draft</span><br></pre></td></tr></table></figure>
+
+<p>如果你的草稿文件写完了，想要发表到post中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish draft newpage</span><br><span class="line">就会自动把newpage.md发送到post中。</span><br></pre></td></tr></table></figure>
+
+
+
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/31/hello-world/" data-id="cl6a2v3hv0003x4vr2km95njg" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/31/hello-world/" data-id="cl6a3zwoz000974vr3nhdgwdj" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -132,9 +148,9 @@
     </a>
   
   
-    <a href="/2022/07/27/java-printf/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/07/27/java%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">java_printf</div>
+      <div class="article-nav-title">java培训笔记</div>
     </a>
   
 </nav>
@@ -154,7 +170,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/" rel="tag">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">java, 数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu%E5%AE%89%E8%A3%85/" rel="tag">ubuntu安装</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" rel="tag">自我介绍</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/" rel="tag">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">java, 数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu%E5%AE%89%E8%A3%85/" rel="tag">ubuntu安装</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" rel="tag">自我介绍</a></li></ul>
     </div>
   </div>
 
@@ -164,7 +180,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/java-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">java, 数据结构</a> <a href="/tags/ubuntu%E5%AE%89%E8%A3%85/" style="font-size: 10px;">ubuntu安装</a> <a href="/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">自我介绍</a>
+      <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/java-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">java, 数据结构</a> <a href="/tags/ubuntu%E5%AE%89%E8%A3%85/" style="font-size: 10px;">ubuntu安装</a> <a href="/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">自我介绍</a>
     </div>
   </div>
 
@@ -186,6 +202,14 @@
       <ul>
         
           <li>
+            <a href="/2022/08/01/build_hexo/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/01/%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%80%83%E8%AF%95/">第一次考试</a>
+          </li>
+        
+          <li>
             <a href="/2022/08/01/idea%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/">idea快捷键大全</a>
           </li>
         
@@ -195,14 +219,6 @@
         
           <li>
             <a href="/2022/07/31/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/27/java-printf/">java_printf</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/27/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/">自我介绍、智游</a>
           </li>
         
       </ul>
