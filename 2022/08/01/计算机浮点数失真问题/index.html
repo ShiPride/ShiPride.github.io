@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>计算机浮点数失真问题 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="计算机浮点数失真问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机浮点数失真问题">
+<meta property="og:url" content="http://example.com/2022/08/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%B5%AE%E7%82%B9%E6%95%B0%E5%A4%B1%E7%9C%9F%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="计算机浮点数失真问题">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/..%5Cimg%5C3_java.png">
+<meta property="og:image" content="http://example.com/..%5Cimg%5C1_python.png">
+<meta property="og:image" content="http://example.com/..%5Cimg%5C2_c.png">
+<meta property="article:published_time" content="2022-08-01T06:59:28.000Z">
+<meta property="article:modified_time" content="2022-08-04T03:36:49.664Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="数据结构">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/..%5Cimg%5C3_java.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-计算机浮点数失真问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%B5%AE%E7%82%B9%E6%95%B0%E5%A4%B1%E7%9C%9F%E9%97%AE%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2022-08-01T06:59:28.000Z" itemprop="datePublished">2022-08-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      计算机浮点数失真问题
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>计算机浮点数失真问题</p>
+<span id="more"></span>
+
+<h2 id="现象："><a href="#现象：" class="headerlink" title="现象："></a>现象：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如计算50000*0.036</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a=<span class="number">50000</span>;</span><br><span class="line"><span class="type">double</span> b=<span class="number">0.036f</span>;</span><br><span class="line"><span class="type">double</span> c=a*b;</span><br><span class="line">System.out.printf(<span class="string">&quot;%f\n&quot;</span>,c);</span><br></pre></td></tr></table></figure>
+
+<p>Java</p>
+<p><img src="/..%5Cimg%5C3_java.png"></p>
+<p>python</p>
+<p><img src="/..%5Cimg%5C1_python.png" alt="python"></p>
+<p>C&#x2F;C++</p>
+<p><img src="/..%5Cimg%5C2_c.png"></p>
+<h2 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h2><p>​       我们都知道计算机内部存储和表示数据都是用二进制来表示的，所以当你想表示一个浮点数的时候，很自然的就是跟整数的二进制一样，只不过多了个小数点。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">8.125</span>		二进制： <span class="number">1000.001</span></span><br><span class="line"><span class="number">0.5</span>			二进制： <span class="number">0.1</span>(<span class="number">2</span>^-<span class="number">1</span>)</span><br><span class="line"><span class="number">0.25</span> 		二进制： <span class="number">0.01</span>(<span class="number">2</span>^-<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>​        也就是每一位的权重都是对应的2的i次幂</p>
+<p>但是这种表示方法有几种缺陷：</p>
+<ul>
+<li><p>小数部分只能表示符合x*2^y的数字，像 1&#x2F;5 这种数字，只能无限接近</p>
+</li>
+<li><p>在有限的长度内，比如32位或者64位，用这个表示方法很难表达很小以及很大的数</p>
+</li>
+</ul>
+<p>​       在1985年前，各个计算机厂商都有自己的浮点数表示和计算方法，并且大部分都不会把精确度放在第一位，更多的是考虑计算速度和实现上的方便。直到1985年，<strong>IEEE</strong> 才起草出版了 <em><strong>IEEE 754标准</strong></em> ，统一了浮点数表示和计算方法。</p>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>​		把浮点型数据转为大数据类型BigDecimal</p>
+<h3 id="BigDecimal-中的五个容易踩的坑"><a href="#BigDecimal-中的五个容易踩的坑" class="headerlink" title="BigDecimal 中的五个容易踩的坑"></a><strong>BigDecimal 中的五个容易踩的坑</strong></h3><h4 id="①new-BigDecimal-还是-BigDecimal-valueOf-？"><a href="#①new-BigDecimal-还是-BigDecimal-valueOf-？" class="headerlink" title="①new BigDecimal() 还是 BigDecimal#valueOf()？"></a>①new BigDecimal() 还是 BigDecimal#valueOf()？</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BigDecimal</span> <span class="variable">bd1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="number">0.01</span>);</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">bd2</span> <span class="operator">=</span> BigDecimal.valueOf(<span class="number">0.01</span>);</span><br><span class="line">System.out.println(<span class="string">&quot;bd1 = &quot;</span> + bd1);</span><br><span class="line">System.out.println(<span class="string">&quot;bd2 = &quot;</span> + bd2);</span><br></pre></td></tr></table></figure>
+
+<p>输出到控制台的结果是：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bd1 = <span class="number">0.01000000000000000020816681711721685132943093776702880859375</span></span><br><span class="line">bd2 = <span class="number">0.01</span></span><br></pre></td></tr></table></figure>
+
+<p>​		造成这种差异的原因是 0.1 这个数字计算机是无法精确表示的，送给 BigDecimal 的时候就已经丢精度了，而 BigDecimal#valueOf 的实现却完全不同。</p>
+<p>​		所以大家要尽量要使用字符串而不是浮点数去构造 BigDecimal 对象，如果实在不行，就使用 BigDecimal#valueOf() 方法吧。</p>
+<h4 id="②等值比较"><a href="#②等值比较" class="headerlink" title="②等值比较"></a>②等值比较</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BigDecimal</span> <span class="variable">bd1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.0&quot;</span>);</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">bd2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.00&quot;</span>);</span><br><span class="line">System.out.println(bd1.equals(bd2));</span><br><span class="line">System.out.println(bd1.compareTo(bd2));</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">控制台的输出将会是：</span><br><span class="line"><span class="literal">false</span></span><br><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>究其原因是，BigDecimal 中 equals 方法的实现会比较两个数字的精度，而 compareTo 方法则只会比较数值的大小。</p>
+<h4 id="③BigDecimal-并不代表无限精度"><a href="#③BigDecimal-并不代表无限精度" class="headerlink" title="③BigDecimal 并不代表无限精度"></a>③BigDecimal 并不代表无限精度</h4><p>先看这段代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BigDecimal</span> <span class="variable">a</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.0&quot;</span>);</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">b</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;3.0&quot;</span>);</span><br><span class="line">a.divide(b) <span class="comment">// results in the following exception.</span></span><br></pre></td></tr></table></figure>
+
+<p>结果会抛出异常：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java.lang.ArithmeticException: Non-terminating decimal expansion; </span><br><span class="line">no exact representable decimal result.</span><br></pre></td></tr></table></figure>
+
+<p>大意是，如果除法的商的结果是一个无限小数但是我们期望返回精确的结果，那程序就会抛出异常。</p>
+<p>回到我们的这个例子，我们需要告诉 JVM 我们不需要返回精确的结果就好了：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BigDecimal</span> <span class="variable">a</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.0&quot;</span>);</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">b</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;3.0&quot;</span>);</span><br><span class="line">a.divide(b, <span class="number">2</span>, RoundingMode.HALF_UP)<span class="comment">// 0.33</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="④BigDecimal-转回-String-要小心"><a href="#④BigDecimal-转回-String-要小心" class="headerlink" title="④BigDecimal 转回 String 要小心"></a>④BigDecimal 转回 String 要小心</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BigDecimal</span> <span class="variable">d</span> <span class="operator">=</span> BigDecimal.valueOf(<span class="number">12334535345456700.12345634534534578901</span>);</span><br><span class="line"><span class="type">String</span> <span class="variable">out</span> <span class="operator">=</span> d.toString(); <span class="comment">// Or perform any formatting that needs to be done</span></span><br><span class="line">System.out.println(out); <span class="comment">// 1.23345353454567E+16</span></span><br></pre></td></tr></table></figure>
+
+<p>可以看到结果已经被转换成了科学计数法，可能这个并不是预期的结果 BigDecimal 有三个方法可以转为相应的字符串类型，切记不要用错：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String <span class="title function_">toString</span><span class="params">()</span>;     <span class="comment">// 有必要时使用科学计数法</span></span><br><span class="line">String <span class="title function_">toPlainString</span><span class="params">()</span>;   <span class="comment">// 不使用科学计数法</span></span><br><span class="line">String <span class="title function_">toEngineeringString</span><span class="params">()</span>;  </span><br><span class="line"><span class="comment">// 工程计算中经常使用的记录数字的方法，与科学计数法类似，但要求10的幂必须是3的倍数</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="⑤执行顺序不能调换（乘法交换律失效）"><a href="#⑤执行顺序不能调换（乘法交换律失效）" class="headerlink" title="⑤执行顺序不能调换（乘法交换律失效）"></a>⑤执行顺序不能调换（乘法交换律失效）</h4><p>乘法满足交换律是一个常识，但是在计算机的世界里，会出现不满足乘法交换律的情况：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BigDecimal</span> <span class="variable">a</span> <span class="operator">=</span> BigDecimal.valueOf(<span class="number">1.0</span>);</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">b</span> <span class="operator">=</span> BigDecimal.valueOf(<span class="number">3.0</span>);</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">c</span> <span class="operator">=</span> BigDecimal.valueOf(<span class="number">3.0</span>);</span><br><span class="line">System.out.println(a.divide(b, <span class="number">2</span>, RoundingMode.HALF_UP).multiply(c)); <span class="comment">// 0.990</span></span><br><span class="line">System.out.println(a.multiply(c).divide(b, <span class="number">2</span>, RoundingMode.HALF_UP)); <span class="comment">// 1.00</span></span><br></pre></td></tr></table></figure>
+
+<p>别小看这这 0.01 的差别，在汇金领域，会产生非常大的金额差异。</p>
+<p><strong>最佳实践</strong></p>
+<p>关于金额计算，很多业务团队会基于 BigDecimal 再封装一个 Money 类，其实我们直接可以用一个半官方的 Money 类：JSR 354，虽然没能在 Java 9 中成为 Java 标准，很有可能集成到后续的 Java 版本中成为官方库。</p>
+<p>①maven 坐标：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.javamoney<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>moneta<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span></span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<p>②新建 Money 类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">CurrencyUnit</span> <span class="variable">cny</span> <span class="operator">=</span> Monetary.getCurrency(<span class="string">&quot;CNY&quot;</span>);</span><br><span class="line"><span class="type">Money</span> <span class="variable">money</span> <span class="operator">=</span> Money.of(<span class="number">1.0</span>, cny); </span><br><span class="line"><span class="comment">// 或者 Money money = Money.of(1.0, &quot;CNY&quot;);</span></span><br><span class="line"><span class="comment">//System.out.println(money);</span></span><br></pre></td></tr></table></figure>
+
+<p>③金额运算：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">CurrencyUnit</span> <span class="variable">cny</span> <span class="operator">=</span> Monetary.getCurrency(<span class="string">&quot;CNY&quot;</span>);</span><br><span class="line"><span class="type">Money</span> <span class="variable">oneYuan</span> <span class="operator">=</span> Money.of(<span class="number">1.0</span>, cny);</span><br><span class="line"><span class="type">Money</span> <span class="variable">threeYuan</span> <span class="operator">=</span> oneYuan.add(Money.of(<span class="number">2.0</span>, <span class="string">&quot;CNY&quot;</span>)); <span class="comment">//CNY 3</span></span><br><span class="line"><span class="type">Money</span> <span class="variable">tenYuan</span> <span class="operator">=</span> oneYuan.multiply(<span class="number">10</span>); <span class="comment">// CNY 10</span></span><br><span class="line"><span class="type">Money</span> <span class="variable">fiveFen</span> <span class="operator">=</span> oneYuan.divide(<span class="number">2</span>); <span class="comment">//CNY 0.5</span></span><br></pre></td></tr></table></figure>
+
+<p>④比较相等：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Money</span> <span class="variable">fiveFen</span> <span class="operator">=</span> Money.of(<span class="number">0.5</span>, <span class="string">&quot;CNY&quot;</span>); <span class="comment">//CNY 0.5</span></span><br><span class="line"><span class="type">Money</span> <span class="variable">anotherFiveFen</span> <span class="operator">=</span> Money.of(<span class="number">0.50</span>, <span class="string">&quot;CNY&quot;</span>); <span class="comment">// CNY 0.50</span></span><br><span class="line">System.out.println(fiveFen.equals(anotherFiveFen)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>可以看到，这个类对金额做了显性的抽象，增加了金额的单位，也避免了直接使用 BigDecimal 的一些坑。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/08/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%B5%AE%E7%82%B9%E6%95%B0%E5%A4%B1%E7%9C%9F%E9%97%AE%E9%A2%98/" data-id="cl6ehm9dz000s58vr6n2k3xnt" data-title="计算机浮点数失真问题" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/08/01/build_hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/" rel="tag">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">java, 数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu%E5%AE%89%E8%A3%85/" rel="tag">ubuntu安装</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" rel="tag">自我介绍</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Typora/" style="font-size: 10px;">Typora</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/java-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">java, 数据结构</a> <a href="/tags/ubuntu%E5%AE%89%E8%A3%85/" style="font-size: 10px;">ubuntu安装</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">自我介绍</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/08/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%B5%AE%E7%82%B9%E6%95%B0%E5%A4%B1%E7%9C%9F%E9%97%AE%E9%A2%98/">计算机浮点数失真问题</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/01/build_hexo/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/01/%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%80%83%E8%AF%95/">第一次考试</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/01/idea%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/">idea快捷键大全</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/31/hexo%E9%87%8D%E8%A3%85-1/">hexo重装</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
