@@ -164,6 +164,463 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-智游-苗天宝" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/08/29/%E6%99%BA%E6%B8%B8-%E8%8B%97%E5%A4%A9%E5%AE%9D/">智游-苗天宝</a>
+    </h1>
+  
+
+        
+        <a href="/2022/08/29/%E6%99%BA%E6%B8%B8-%E8%8B%97%E5%A4%A9%E5%AE%9D/" class="archive-article-date">
+  	<time datetime="2022-08-29T12:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-helloworld"><a href="#1-helloworld" class="headerlink" title="1 helloworld"></a>1 helloworld</h1><h2 id="1-1-三个关键字"><a href="#1-1-三个关键字" class="headerlink" title="1.1 三个关键字"></a>1.1 三个关键字</h2><ul>
+<li><p>jvm:JavaVirtualMachine Java虚拟机  实现java跨平台技术  ，根据当前操作系统 执行java字节码文件</p>
+</li>
+<li><p>jre：java runtime environment  java运行环境</p>
+<p>jre&#x3D;java基础类库+jvm</p>
+</li>
+<li><p>jdk：Java development kits  ：java开发工具包</p>
+</li>
+</ul>
+<p>​     jdk&#x3D;jre+java开发工具(javac.exe编译器+javadoc.exe文档生成器)</p>
+<h2 id="1-2-第一个程序"><a href="#1-2-第一个程序" class="headerlink" title="1.2 第一个程序"></a>1.2 第一个程序</h2><h3 id="1-2-1-编辑：编写java源文件"><a href="#1-2-1-编辑：编写java源文件" class="headerlink" title="1.2.1 编辑：编写java源文件"></a>1.2.1 编辑：编写java源文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">编辑概念：写java代码 生成java源文件</span><br><span class="line">编辑工具：所有支持文本的软件都可以：notepad.exe、notepad++</span><br><span class="line">编辑步骤： 1创建文件：后缀名为.java</span><br><span class="line">         2创建类：class 类名&#123;&#125;</span><br><span class="line">         3类中创建主方法：public static void main(String[] s)&#123;&#125;</span><br><span class="line">         4主方法中打印输出：System.out.println(&quot;额和和&quot;);</span><br><span class="line">注意事项： 1 除了&quot;&quot;中的内容 其他都不能更改</span><br><span class="line">         2 命名增加可读性+ 对其缩进</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注意1：一个文件中可以有多个类 但只能有一个public类 此public类的类名必须和文件名一致</span></span><br><span class="line"><span class="comment">//注意2：注释有三种</span></span><br><span class="line"><span class="comment">//注意3：;表示语句结束</span></span><br><span class="line"><span class="comment">//注意4：大括号表示范围</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">HelloWorld</span>&#123;<span class="comment">//1 创建类</span></span><br><span class="line">	<span class="comment">//2 创建主方法</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">      aaaa</span></span><br><span class="line"><span class="comment">      1111</span></span><br><span class="line"><span class="comment">      12222</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">      33333</span></span><br><span class="line"><span class="comment">      1111</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] s)</span>&#123;</span><br><span class="line">		<span class="comment">//3 打印输出语句</span></span><br><span class="line">		 System.out.println(<span class="string">&quot;java43：天道酬勤 不忘初衷！&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-2-编译"><a href="#1-2-2-编译" class="headerlink" title="1.2.2 编译"></a>1.2.2 编译</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">编译概念：根据java源文件生成 电脑可执行的字节码文件</span><br><span class="line">编译工具：javac.exe 编译器</span><br><span class="line">编译命令：javac 源文件名.java</span><br><span class="line">编译作用：语法检查+生成字节码文件(类名.class)</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-3-运行"><a href="#1-2-3-运行" class="headerlink" title="1.2.3 运行"></a>1.2.3 运行</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">运行概念：执行java程序</span><br><span class="line">运行工具：java.exe 虚拟机</span><br><span class="line">运行命令：java 类名</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-基础语法"><a href="#2-基础语法" class="headerlink" title="2 基础语法"></a>2 基础语法</h1><h2 id="2-1-关键字："><a href="#2-1-关键字：" class="headerlink" title="2.1 关键字："></a>2.1 关键字：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Java中被赋予特殊含义的单词或者字符</span><br><span class="line">class  interface </span><br><span class="line">public protected private</span><br><span class="line">byte short int long char float double boolean</span><br><span class="line">true false</span><br><span class="line">if while for switch case break continue </span><br><span class="line">final static abstract  void</span><br><span class="line">extends implements</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-2-标识符"><a href="#2-2-标识符" class="headerlink" title="2.2 标识符"></a>2.2 标识符</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">概念：java中所有的名字</span><br><span class="line">意义：同类之间区分 方便调用</span><br><span class="line">命名规则：不遵守 编译器报错</span><br><span class="line">         1 由数字 字母 下划线 美元符号组成</span><br><span class="line">         2 不能以数字开头</span><br><span class="line">         3 不能是java关键字</span><br><span class="line">         4 区分大小写</span><br><span class="line">命名规范：编程习惯</span><br><span class="line">        1 尽量增加可读性</span><br><span class="line">        2 首字母大小写(不同标识符 要求不同)</span><br><span class="line">        (类名：所有单词首字母大写：WoDeZiWoJieShao)</span><br><span class="line">        (变量名：方法名：除了第一个单词 其他单词首字母大写)</span><br><span class="line">        (常量：所有字母大写：单词之间用_连接)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-3-数据类型"><a href="#2-3-数据类型" class="headerlink" title="2.3 数据类型"></a>2.3 数据类型</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">4种8类</span><br><span class="line">整数类型：不带小数点的数字</span><br><span class="line">     byte: 字节型： 注意：1 描述数据的最小单位  2 取值范围[-128,127]  </span><br><span class="line">     short:短整型： 1short=2byte 注意：1 取值范围[-32768,32767]</span><br><span class="line">     int:整型：  1int=4byte:注意：1 默认类型</span><br><span class="line">     long：长整型： 1long=8byte： 注意： 1 long类型的常量后面加l/L     </span><br><span class="line">浮点类型：带小数点的数字</span><br><span class="line">     float: 单精度： 1float=4byte :注意1： 小数点有效位数6-8 2: float常量后面加f/F</span><br><span class="line">     double：双精度：1double=8byte:注意1：浮点的默认类型 2 小数点后有效位数为12</span><br><span class="line">字符类型：所有的符号</span><br><span class="line">      char :字符型： 1char=2byte:注意1：char常量必须写在&#x27;&#x27;中 2 &#x27;&#x27;中有且只有一个字符</span><br><span class="line">布尔类型：只有两个结果 并且是相反的</span><br><span class="line">      boolean：布尔型：1boolean=1byte 注意1：只有两个值：true/false</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-4-常量和变量"><a href="#2-4-常量和变量" class="headerlink" title="2.4 常量和变量"></a>2.4 常量和变量</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">常量：运算过程中值不能更改的数据</span><br><span class="line">     常量值： 1  &#x27;a&#x27;  1.1 true</span><br><span class="line">     final变量：</span><br><span class="line">变量：运算过程中值可以更改的数据</span><br><span class="line">     步骤：先定义 再赋值 然后使用</span><br><span class="line">定义变量：变量类型 变量名;</span><br><span class="line">变量赋值：变量名=常量值;</span><br><span class="line">使用变量：打印输出 进行运算</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i1=<span class="number">1</span>,i2=<span class="number">2</span>;</span><br><span class="line"><span class="type">char</span> c1=<span class="string">&#x27;1&#x27;</span>,c2=<span class="string">&#x27;2&#x27;</span>;</span><br><span class="line"><span class="type">short</span> s1=<span class="number">1</span>,s2=<span class="number">2</span>;</span><br><span class="line"><span class="type">long</span> l1=<span class="number">1L</span>,l2=<span class="number">2</span>;</span><br><span class="line"><span class="type">double</span> d1=<span class="number">1</span>,d2=<span class="number">2</span>;</span><br><span class="line"><span class="type">float</span> f1=<span class="number">1</span>,f2=<span class="number">2</span>;</span><br><span class="line">   </span><br><span class="line">  i1=c1+i2; <span class="comment">// 1 通过编码表获取&#x27;1&#x27;对应的整数 49 2 拿int的49和int的2运算 得到int 51 赋值给i1</span></span><br><span class="line">  f1=(<span class="type">int</span>)(d1+f2); <span class="comment">// 1 吧float的2.0f提升为double的2.0 2 两个double运算得到double的3.0 </span></span><br><span class="line">                   <span class="comment">// 3：double强制转化为int的3 4：int的3向上提升为float的3.0f 然后赋值</span></span><br><span class="line">  f1=f1+l1; </span><br><span class="line">  d1=c1+i1+f1;</span><br><span class="line">  c1=s1+s2;</span><br><span class="line">  i1=c1+s1;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-5-数据类型转换"><a href="#2-5-数据类型转换" class="headerlink" title="2.5 数据类型转换"></a>2.5 数据类型转换</h2><ul>
+<li>数据类型精度表</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">byte-short-(char)-int-long-float-double</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>自动类型转换情况一：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">概念：把低精度值赋值给高精度变量：</span><br><span class="line">格式：高精度变量=低精度值;</span><br><span class="line">     float f1=1;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>自动类型转换情况二：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">概念：给byte/short/char 类型的变量赋值int常量值 自动进行范围判断 装下就转换 装不下就报错</span><br><span class="line">格式： byte/short/char 类型的变量=int常量</span><br><span class="line">      byte b1=1;// 00000000 00000000 00000000  00000001 ---&gt;  00000001</span><br><span class="line">      int i1=1;</span><br><span class="line">      b1=i1;//错误</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>强制类型转换</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">概念：把给精度值强制赋值给低精度变量</span><br><span class="line">格式：低精度变量=(低精度变量类型)高精度值;</span><br><span class="line">     int i1=(int)1.34;</span><br><span class="line">     int i=(char)(1.1+48)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-6-运算符"><a href="#2-6-运算符" class="headerlink" title="2.6 运算符"></a>2.6 运算符</h2><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">数学中已有的：+ - * /</span><br><span class="line">特有的： %  ++ -- </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">      <span class="comment">//1 算术运算符</span></span><br><span class="line"><span class="comment">//1.1 + 作用1：正负</span></span><br><span class="line"><span class="type">int</span> i1=+<span class="number">1</span>;i1=-<span class="number">1</span>;</span><br><span class="line"><span class="comment">//      作用2：加减</span></span><br><span class="line">i1=<span class="number">1</span>+<span class="number">1</span>;</span><br><span class="line"><span class="comment">//      作用3：字符串连接符</span></span><br><span class="line"><span class="type">int</span> a=<span class="number">1</span>,b=<span class="number">2</span>;</span><br><span class="line"><span class="comment">//打印a=1,b=2</span></span><br><span class="line">System.out.println(<span class="string">&quot;a=1,b=2&quot;</span>);</span><br><span class="line"><span class="comment">//1 区分变量(打印的是变量的值)和字符串(原封不动的内容)</span></span><br><span class="line"><span class="comment">//2 字符串写在字符串中 变量的值用变量表示 之间用连接符+连接即可</span></span><br><span class="line">System.out.println(<span class="string">&quot;a=&quot;</span>+a+<span class="string">&quot;,b=&quot;</span>+b);</span><br><span class="line"><span class="comment">//打印a=1,b=2,a+b=3</span></span><br><span class="line">System.out.println(<span class="string">&quot;a=&quot;</span>+a+<span class="string">&quot;,b=&quot;</span>+b+<span class="string">&quot;,a+b=&quot;</span>+(a+b));</span><br><span class="line"></span><br><span class="line"><span class="comment">//1.2 ++ --</span></span><br><span class="line">a++;<span class="comment">//完全等价于a=(a的类型)(a+1)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//1.3 %  余数的正负 取决于被除数</span></span><br><span class="line"><span class="comment">//n%m= n除以m得到一个整数 除不尽的那部分</span></span><br><span class="line">System.out.println(<span class="string">&quot;4.7%2.3=&quot;</span>+(<span class="number">4.7</span>%<span class="number">2.3</span>));<span class="comment">//0.1</span></span><br><span class="line">System.out.println(<span class="string">&quot;-4.7%2.3=&quot;</span>+(-<span class="number">4.7</span>%<span class="number">2.3</span>));<span class="comment">//-0.1</span></span><br><span class="line">System.out.println(<span class="string">&quot;4.7%(-2.3)=&quot;</span>+(<span class="number">4.7</span>%(-<span class="number">2.3</span>)));<span class="comment">//0.1</span></span><br><span class="line">System.out.println(<span class="string">&quot;(-4.7)%(-2.3)=&quot;</span>+((-<span class="number">4.7</span>)%(-<span class="number">2.3</span>)));<span class="comment">//-0.1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//判断一个数是不是水仙花数：</span></span><br><span class="line"><span class="comment">//1 必须是三位数</span></span><br><span class="line"><span class="comment">//2 各个位数的三次方之和等于此数： 153=1*1*1+5*5*5+3*3*3=1+125+27=153</span></span><br><span class="line"><span class="type">int</span> n=<span class="number">371</span>;</span><br><span class="line"><span class="comment">//1 获取每一位的值</span></span><br><span class="line"><span class="type">int</span> n1=n%<span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> n2=n/<span class="number">10</span>%<span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> n3=n/<span class="number">100</span>;</span><br><span class="line"><span class="comment">//2 获取这三个数的三次之和</span></span><br><span class="line"><span class="type">int</span> sumn=n1*n1*n1+n2*n2*n2+n3*n3*n3;</span><br><span class="line"><span class="comment">//3 判断n是否等于sumn</span></span><br><span class="line"><span class="keyword">if</span>(sumn==n) &#123;</span><br><span class="line">	System.out.println(n+<span class="string">&quot;是水仙花数！&quot;</span>);</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">	System.out.println(n+<span class="string">&quot;不是水仙花数！&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">       <span class="comment">// 2 赋值运算符：</span></span><br><span class="line"><span class="comment">// 2.1 =</span></span><br><span class="line"><span class="comment">// 给变量赋的值的类型必须和变量类型一致</span></span><br><span class="line"><span class="comment">// 2.2 特有：+= -= *= /= %=</span></span><br><span class="line">a += b;<span class="comment">// 等价于a=(a的类型)(a+b)</span></span><br><span class="line"><span class="type">byte</span> <span class="variable">b1</span> <span class="operator">=</span> <span class="number">1</span>, b2 = <span class="number">2</span>;</span><br><span class="line">b1 += b2;</span><br><span class="line"><span class="comment">// 运算后结果的数据类型取决于精度最高的数据</span></span><br><span class="line"><span class="comment">// byte,short,char不能直接参加运算 必须自动提升为int 才能运算</span></span><br><span class="line">b1 = (<span class="type">byte</span>) (b1 + b2);<span class="comment">// Type mismatch: cannot convert from int to byte</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">      <span class="comment">// 3 比较运算符:结果是boolean</span></span><br><span class="line"><span class="comment">// 3.1 &gt; &lt; &gt;= &lt;=</span></span><br><span class="line"><span class="comment">// 3.2 != ==</span></span><br><span class="line">System.out.println(<span class="number">1</span> != <span class="number">1</span>);</span><br><span class="line">System.out.println(<span class="number">1</span> == <span class="number">1</span>);   </span><br></pre></td></tr></table></figure>
+
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 4 逻辑运算符：只能操作布尔数据 而且结果也是布尔胡数据</span><br><span class="line">	// 4.1 &amp; 单 与 &amp;&amp; 双与 and ：两个都成成立 才成立</span><br><span class="line">	// | 单或 || 双或 or ：只要有一个成立 就成立</span><br><span class="line">	// ^ 异或 ：两个不同就成立</span><br><span class="line">	// ！ 取反</span><br><span class="line">	// 注意1：双和单 结果一样</span><br><span class="line">	// 注意2：双和单的区别： 双存在逻辑短路+单可以作为位运算符</span><br></pre></td></tr></table></figure>
+
+<h3 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">格式：boolean值?值1:值2</span><br><span class="line">boolean值为true 结果是值1 boolean值为false结果是值2</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//5 三元运算符</span></span><br><span class="line"><span class="type">int</span> a=<span class="number">1</span>,b=<span class="number">3</span>,c=<span class="number">4</span>;</span><br><span class="line"><span class="type">int</span> max;<span class="comment">//定义变量记录大值</span></span><br><span class="line">max=a&gt;b?a:b;</span><br><span class="line"></span><br><span class="line"><span class="comment">//求三个数的大值</span></span><br><span class="line"><span class="type">int</span> max1=a&gt;b?a:b;</span><br><span class="line"><span class="type">int</span> max2=max1&gt;c?max1:c;</span><br><span class="line"><span class="type">int</span> max3=(a&gt;b&amp;&amp;a&gt;c)?a:(b&gt;c?b:c);</span><br><span class="line"><span class="type">int</span> max4=a&gt;b?(a&gt;c?a:c):(b&gt;c?b:c);</span><br></pre></td></tr></table></figure>
+
+<h3 id="位运算符-了解"><a href="#位运算符-了解" class="headerlink" title="位运算符(了解)"></a>位运算符(了解)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">位运算符： &amp;  |  ^  &gt;&gt; &lt;&lt;</span><br><span class="line">位运算符：操作的是数字的二进制  0是false 1是true</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//6 位运算符 了解</span></span><br><span class="line">	<span class="comment">//位运算符：操作的是数字的二进制  0是false 1是true</span></span><br><span class="line">	<span class="comment">//13: 8+4+1=1000+100+1=1101</span></span><br><span class="line">	<span class="comment">//1101  = 1*8+1*4+0*2+1*1 =13</span></span><br><span class="line">	<span class="comment">//123=1*100+2*10+3*1=</span></span><br><span class="line">	System.out.println(<span class="string">&quot;13&amp;3=&quot;</span>+(<span class="number">13</span>&amp;<span class="number">3</span>));<span class="comment">//1</span></span><br><span class="line">	System.out.println(<span class="string">&quot;17|6=&quot;</span>+(<span class="number">17</span>|<span class="number">6</span>));<span class="comment">//23</span></span><br><span class="line">	System.out.println(<span class="string">&quot;17&gt;&gt;2=&quot;</span>+(<span class="number">17</span>&gt;&gt;<span class="number">2</span>));<span class="comment">//4</span></span><br><span class="line">	System.out.println(<span class="string">&quot;17&lt;&lt;2=&quot;</span>+(<span class="number">17</span>&lt;&lt;<span class="number">2</span>));<span class="comment">//68</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="3-流程控制"><a href="#3-流程控制" class="headerlink" title="3 流程控制"></a>3 流程控制</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通过java关键字来控制代码的执行顺序</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-1-选择结构"><a href="#3-1-选择结构" class="headerlink" title="3.1 选择结构"></a>3.1 选择结构</h2><h3 id="if-else结构"><a href="#if-else结构" class="headerlink" title="if else结构"></a>if else结构</h3><h3 id="swicth"><a href="#swicth" class="headerlink" title="swicth"></a>swicth</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//switch</span></span><br><span class="line"><span class="comment">/*注意事项：1 switch表达式的值结果只能是：int String enum</span></span><br><span class="line"><span class="comment">		 *         2 case后面的值不能重复</span></span><br><span class="line"><span class="comment">		 *         3 break作用结束整个switch结构</span></span><br><span class="line"><span class="comment">		 *         4 default:所有的case值都不是switch的结果时 才执行default</span></span><br><span class="line"><span class="comment">		 * </span></span><br><span class="line"><span class="comment">		 * */</span></span><br><span class="line"><span class="type">int</span> month=<span class="number">11</span>;</span><br><span class="line"><span class="keyword">switch</span>(month) &#123;</span><br><span class="line">       </span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="comment">//...</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">        <span class="comment">//...</span></span><br><span class="line">        <span class="keyword">break</span>        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-2-循环结构"><a href="#3-2-循环结构" class="headerlink" title="3.2 循环结构"></a>3.2 循环结构</h2><h3 id="while"><a href="#while" class="headerlink" title="while"></a>while</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	   * while格式：</span></span><br><span class="line"><span class="comment">	   * while(条件表达式)&#123;</span></span><br><span class="line"><span class="comment">	   *      循环体：(循环执行的代码+迭代语句)</span></span><br><span class="line"><span class="comment">	   * &#125;</span></span><br><span class="line"><span class="comment">	   * </span></span><br><span class="line"><span class="comment">	   * </span></span><br><span class="line"><span class="comment">	   * */</span> </span><br></pre></td></tr></table></figure>
+
+<h3 id="dowhile"><a href="#dowhile" class="headerlink" title="dowhile"></a>dowhile</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">     <span class="comment">/*while格式：</span></span><br><span class="line"><span class="comment">* dowhile格式：</span></span><br><span class="line"><span class="comment">* do&#123;</span></span><br><span class="line"><span class="comment">*    循环体</span></span><br><span class="line"><span class="comment">* &#125;while(条件表达式);</span></span><br><span class="line"><span class="comment">* </span></span><br><span class="line"><span class="comment">* 总结： while：是先判断 后执行</span></span><br><span class="line"><span class="comment">*       dowhile：是先执行 后判断</span></span><br><span class="line"><span class="comment">* dowhile：循环体任何情况下至少执行一次</span></span><br><span class="line"><span class="comment">* */</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="for"><a href="#for" class="headerlink" title="for"></a>for</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">		 *for格式：</span></span><br><span class="line"><span class="comment">		 *for(初始化语句;条件表达式;迭代语句)&#123;</span></span><br><span class="line"><span class="comment">		 *    循环体：循环执行的代码</span></span><br><span class="line"><span class="comment">		 *&#125;</span></span><br><span class="line"><span class="comment">		 */</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-3-跳转"><a href="#3-3-跳转" class="headerlink" title="3.3 跳转"></a>3.3 跳转</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* break:</span></span><br><span class="line"><span class="comment">		   * 使用场景1：switch中 使用break 表示结束整个switch结构</span></span><br><span class="line"><span class="comment">		   * 使用场景2：for/while/dowhile中：  结束整个for循环</span></span><br><span class="line"><span class="comment">		   * continue:</span></span><br><span class="line"><span class="comment">		   * 使用场景1：for/while/dowhile中：结束本次for循环 继续++ 进行下次for循环</span></span><br><span class="line"><span class="comment">		   * */</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="4-数组"><a href="#4-数组" class="headerlink" title="4 数组"></a>4 数组</h1><h2 id="4-1-数组概念"><a href="#4-1-数组概念" class="headerlink" title="4.1 数组概念"></a>4.1 数组概念</h2><p>&#x2F;*<br>        装指定个数个 相同类型数据  的容器<br>        1：数组是引用数据类型(非基本数据类型：4种8类)：：复杂数据：：：对象<br>        2：数组中的数据称为元素：数组的元素个数固定<br>        3：数组的元素类型一致</p>
+<pre><code>    数组的关键字：[]
+    定义数组名格式：元素类型[] 数组名;
+    创建数组对象格式：new 元素类型[元素个数];
+    
+    */
+    //格式1：创建数组 并起个名字的格式1：
+    // 元素类型[] 数组名=new 元素类型[元素个数];
+    int[] ageArr=new int[20];//在内存中创建一个可以装20个int元素的数组对象 此数组对象名字叫ageArr
+    // 定义数组名=创建数组对象
+</code></pre>
+<p>​		<br>​		&#x2F;&#x2F;创建基本数据类型的数据<br>​		int age&#x3D;11;<br>​		&#x2F;&#x2F; 定义变量名&#x3D;常量值<br>​		</p>
+<pre><code>    //数组优势：1 数组中装元素时 会自动给元素分配下标(索引) 从0开始
+    //数组优势：2 获取数组中的元素时 通过数组名+下标来获取
+    //格式2： 调用数组中元素的格式：数组名[下标]
+    ageArr[1]=19;
+    ageArr[2]=21;
+    ageArr[4]=20;
+    System.out.println(ageArr[1]+10);
+</code></pre>
+<h2 id="4-2-数组遍历"><a href="#4-2-数组遍历" class="headerlink" title="4.2 数组遍历"></a>4.2 数组遍历</h2><h2 id="4-3-数组排序"><a href="#4-3-数组排序" class="headerlink" title="4.3 数组排序"></a>4.3 数组排序</h2><h3 id="两个变量互换值"><a href="#两个变量互换值" class="headerlink" title="两个变量互换值"></a>两个变量互换值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">      <span class="type">int</span> a,b;</span><br><span class="line">a=<span class="number">1</span>;b=<span class="number">2</span>;</span><br><span class="line">System.out.println(<span class="string">&quot;a=&quot;</span>+a+<span class="string">&quot;,b=&quot;</span>+b);</span><br><span class="line"><span class="comment">//变量互换值：1 再定义一个变量</span></span><br><span class="line"><span class="type">int</span> c=a;<span class="comment">//c=1 a=1 b=2</span></span><br><span class="line">a=b;<span class="comment">//c=1 a=2 b=2</span></span><br><span class="line">b=c;<span class="comment">//c=1 a=2 b=1</span></span><br><span class="line">System.out.println(<span class="string">&quot;a=&quot;</span>+a+<span class="string">&quot;,b=&quot;</span>+b);</span><br><span class="line">a=<span class="number">1</span>;b=<span class="number">2</span>;</span><br><span class="line">System.out.println(<span class="string">&quot;a=&quot;</span>+a+<span class="string">&quot;,b=&quot;</span>+b);</span><br><span class="line"><span class="comment">//变量互换值：2 加法运算</span></span><br><span class="line">a=a+b;<span class="comment">//a=3 b=2</span></span><br><span class="line">b=a-b;<span class="comment">//a=3 b=1</span></span><br><span class="line">a=a-b;<span class="comment">//a=2 b=1</span></span><br><span class="line">System.out.println(<span class="string">&quot;a=&quot;</span>+a+<span class="string">&quot;,b=&quot;</span>+b);</span><br></pre></td></tr></table></figure>
+
+<h3 id="顺序排序"><a href="#顺序排序" class="headerlink" title="顺序排序"></a>顺序排序</h3><ul>
+<li>1 概念：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">顺序排序：依次拿当前元素 和其后面的所有元素作比较</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>2 画图</li>
+</ul>
+<p><img src="E:\java培训\苗天宝\java43课堂记录\imgs\image-20220830173150396.png" alt="image-20220830173150396"></p>
+<ul>
+<li>3 使用代码 实现比较细节</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">      <span class="type">int</span>[] arr= &#123;<span class="number">1</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">0</span>,<span class="number">3</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">	System.out.print(arr[i]+(i==arr.length-<span class="number">1</span>?<span class="string">&quot;\r\n&quot;</span>:<span class="string">&quot;,&quot;</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//顺序排序：依次拿当前元素 和其后面的所有元素作比较</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//1 画图</span></span><br><span class="line"><span class="comment">//2 打印比较细节</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length-<span class="number">1</span>; i++) &#123;<span class="comment">//比较的轮数：length-1</span></span><br><span class="line">	<span class="comment">//当前元素是arr[i]</span></span><br><span class="line">	<span class="comment">//当前元素arr[i]和其后面的所有元素arr[j]做比较：：：</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i+<span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">		 System.out.print(<span class="string">&quot;arr[&quot;</span>+i+<span class="string">&quot;]-arr[&quot;</span>+j+<span class="string">&quot;]\t&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>4 把打印更改为比较</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">     <span class="comment">//3 更改打印为比较</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length-<span class="number">1</span>; i++) &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i+<span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">		<span class="comment">//要求大的排在左边:arr[i]&lt;arr[j]就互换值</span></span><br><span class="line">		<span class="keyword">if</span>(arr[i]&lt;arr[j]) &#123;</span><br><span class="line">			<span class="type">int</span> t=arr[i];arr[i]=arr[j];arr[j]=t;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><ul>
+<li>概念</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">依次拿相邻的元素做比较</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>代码</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">      <span class="comment">//冒泡排序</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length-<span class="number">1</span>; i++) &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; arr.length-i-<span class="number">1</span>; j++) &#123;</span><br><span class="line">		<span class="keyword">if</span>(arr[j]&gt;arr[j+<span class="number">1</span>]) &#123;</span><br><span class="line">			<span class="type">int</span> t=arr[j];arr[j]=arr[j+<span class="number">1</span>];arr[j+<span class="number">1</span>]=t;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-4-二维数组"><a href="#4-4-二维数组" class="headerlink" title="4.4 二维数组"></a>4.4 二维数组</h2><h2 id="4-5-数组练习"><a href="#4-5-数组练习" class="headerlink" title="4.5 数组练习"></a>4.5 数组练习</h2><h1 id="5-方法"><a href="#5-方法" class="headerlink" title="5 方法"></a>5 方法</h1><h2 id="5-1-概念"><a href="#5-1-概念" class="headerlink" title="5.1 概念"></a>5.1 概念</h2><h2 id="5-2-方法格式"><a href="#5-2-方法格式" class="headerlink" title="5.2 方法格式"></a>5.2 方法格式</h2><h2 id="5-3-方法练习"><a href="#5-3-方法练习" class="headerlink" title="5.3 方法练习"></a>5.3 方法练习</h2><h1 id="5-面向对象"><a href="#5-面向对象" class="headerlink" title="5 面向对象"></a>5 面向对象</h1><h2 id="5-1-概念-1"><a href="#5-1-概念-1" class="headerlink" title="5.1 概念"></a>5.1 概念</h2><h2 id="5-2-面向对象四步"><a href="#5-2-面向对象四步" class="headerlink" title="5.2 面向对象四步"></a>5.2 面向对象四步</h2><h2 id="5-3-对象"><a href="#5-3-对象" class="headerlink" title="5.3 对象"></a>5.3 对象</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/08/29/%E6%99%BA%E6%B8%B8-%E8%8B%97%E5%A4%A9%E5%AE%9D/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Markdown绘制流程图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/08/29/Markdown%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%9B%BE/">Markdown绘制流程图</a>
+    </h1>
+  
+
+        
+        <a href="/2022/08/29/Markdown%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%9B%BE/" class="archive-article-date">
+  	<time datetime="2022-08-29T02:49:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Markdown流程图绘制"><a href="#Markdown流程图绘制" class="headerlink" title="Markdown流程图绘制"></a>Markdown流程图绘制</h1><p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44000192/article/details/114981628">https://blog.csdn.net/weixin_44000192/article/details/114981628</a></p>
+        
+          <a class="article-more-a" href="/2022/08/29/Markdown%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%9B%BE/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Markdown</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/08/29/Markdown%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%9B%BE/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ubuntu20重装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/08/25/ubuntu20%E9%87%8D%E8%A3%85/">ubuntu20重装</a>
+    </h1>
+  
+
+        
+        <a href="/2022/08/25/ubuntu20%E9%87%8D%E8%A3%85/" class="archive-article-date">
+  	<time datetime="2022-08-25T09:21:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ubuntu20"><a href="#ubuntu20" class="headerlink" title="ubuntu20"></a>ubuntu20</h1>
+        
+          <a class="article-more-a" href="/2022/08/25/ubuntu20%E9%87%8D%E8%A3%85/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">linux ubuntu</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/08/25/ubuntu20%E9%87%8D%E8%A3%85/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-第二次考试解析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/08/22/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%80%83%E8%AF%95%E8%A7%A3%E6%9E%90/">第二次考试解析</a>
+    </h1>
+  
+
+        
+        <a href="/2022/08/22/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%80%83%E8%AF%95%E8%A7%A3%E6%9E%90/" class="archive-article-date">
+  	<time datetime="2022-08-22T01:20:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.局部变量不可以使用public修饰符进行修饰。</p>
+<p>2.静态变量能用private修饰符。</p>
+<p>3.在运行时，<strong>泛型已经被擦除（JVM泛型的擦除机制，在运行时JVM是不知道泛型信息的）</strong>，不起任何作用。</p>
+<p>4.StringBuffer类是线程安全的。StringBuilder是线程不安全的。</p>
+<p>5.<em>ArrayList</em> <em>（集合**）对象</em>不<em>能存储</em>基本*类型,*只能存储引用类型的数据。</p>
+<ol start="6">
+<li></li>
+</ol>
+<p>read(byte[])方法会尝试读取与给定字节数组容量一样大的字节数，返回值说明了已经读取过的字节数。如果InputStream内可读的数据不足以填满字节数组，那么数组剩余的部分将包含本次读取之前的数据。记得检查有多少数据实际被写入到了字节数组中。</p>
+<p>read(byte, int offset, int length)方法同样将数据读取到字节数组中，不同的是，该方法从数组的offset位置开始，并且最多将length个字节写入到数组中。同样地，read(byte, int offset, int length)方法返回一个int变量，告诉你已经有多少字节已经被写入到字节数组中，所以请记得在读取数据前检查上一次调用read(byte, int offset, int length)的返回值。</p>
+<ol start="7">
+<li></li>
+</ol>
+<p>static静态代码块：随着类的加载而执行，只执行一次</p>
+<p>普通匿名代码块：随着对象的创建而执行，每new一次对象执行一次。</p>
+<p>构造方法：在创建对象的时候，new对象的时候执行。</p>
+<p>8.Set集合通过add()添加<em>对象</em> &#x2F; 存储对象的。</p>
+<ol start="8">
+<li></li>
+<li><p>forEach语句<strong>可以修改集合&#x2F;数组元素为对象的值</strong>，但<strong>不可以修改数组元素为变量的值</strong>。</p>
+</li>
+<li><p>forEach语句<strong>不能在集合&#x2F;数组中添加或删除对象</strong>。</p>
+</li>
+<li></li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java培训</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/08/22/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%80%83%E8%AF%95%E8%A7%A3%E6%9E%90/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-泛型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -591,278 +1048,9 @@
 
 
   
-    <article id="post-第一次考试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/08/01/%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%80%83%E8%AF%95/">第一次考试</a>
-    </h1>
-  
-
-        
-        <a href="/2022/08/01/%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%80%83%E8%AF%95/" class="archive-article-date">
-  	<time datetime="2022-08-01T02:01:44.279Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="第一次考试解析"><a href="#第一次考试解析" class="headerlink" title="第一次考试解析"></a>第一次考试解析</h1>
-        
-          <a class="article-more-a" href="/2022/08/01/%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%80%83%E8%AF%95/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/08/01/%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%80%83%E8%AF%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-java培训笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 color="red">java培训笔记</h1>
-
-<p>java</p>
-        
-          <a class="article-more-a" href="/2022/08/01/java%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/08/01/java%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-idea快捷键大全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/08/01/idea%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/">idea快捷键大全</a>
-    </h1>
-  
-
-        
-        <a href="/2022/08/01/idea%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/" class="archive-article-date">
-  	<time datetime="2022-08-01T01:19:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>idea快捷键大全（Windows）</p>
-        
-          <a class="article-more-a" href="/2022/08/01/idea%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">idea</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/08/01/idea%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo重装-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/07/31/hexo%E9%87%8D%E8%A3%85-1/">hexo重装</a>
-    </h1>
-  
-
-        
-        <a href="/2022/07/31/hexo%E9%87%8D%E8%A3%85-1/" class="archive-article-date">
-  	<time datetime="2022-07-31T13:36:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>hexo</p>
-        
-          <a class="article-more-a" href="/2022/07/31/hexo%E9%87%8D%E8%A3%85-1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/07/31/hexo%E9%87%8D%E8%A3%85-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -965,11 +1153,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+                <a href="javascript:void(0)" class="js-tag color1">HTML5</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HTML5</a>
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -981,19 +1169,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">idea</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ubuntu安装</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安装</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">java, 数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">linux ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1006,6 +1202,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">计算机操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Java培训</a>
               </li>
             
             <div class="clearfix"></div>
